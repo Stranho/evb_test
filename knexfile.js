@@ -11,36 +11,9 @@ module.exports = {
     connection: 'postgre://localhost/test-evb-test-sp'
   },
 
-  staging: {
-    client: 'postgresql',
-    connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
-    },
-    pool: {
-      min: 2,
-      max: 10
-    },
-    migrations: {
-      tableName: 'knex_migrations'
-    }
-  },
-
   production: {
-    client: 'postgresql',
-    connection: {
-      database: 'evb-test-sp',
-      user:     'username',
-      password: 'password'
-    },
-    pool: {
-      min: 2,
-      max: 10
-    },
-    migrations: {
-      tableName: 'knex_migrations'
-    }
+    client: 'pg',
+    connection: 'postgres://smgxtmbhjxiufs:4cf985dbcc59800b7a59b18d5256bb5c2444d22274557b6f2788fd09d399d6f7@ec2-18-215-111-67.compute-1.amazonaws.com:5432/dar3png1l6apo2',
   }
 
 };
