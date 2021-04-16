@@ -4,7 +4,7 @@
   "description": "Teste de FullStack",
   "main": "index.js",
   "scripts": {
-    "start": "npx cross-env NODE_ENV=production node index.js & (cd client && npm run start)",
+    "start": "npx cross-env NODE_ENV=production npx concurrently \"node index.js\" \"cd client && npm run start\"",
     "dev": "nodemon",
     "test": "(dropdb --if-exists test-evb-test-sp && createdb test-evb-test-sp) && NODE_ENV=test mocha"
   },
