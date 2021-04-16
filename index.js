@@ -3,6 +3,7 @@ const path = require('path');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const jogadores = require('./api/jogadores');
 const transfers = require('./api/transfers');
@@ -21,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 //     res.json(list);
 //     console.log('Sent list of items');
 // });
-
+app.use(cors());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
